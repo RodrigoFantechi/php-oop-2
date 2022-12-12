@@ -1,26 +1,18 @@
 <?php
 
 class Category{
-    private $name;
+   public $name;
 
     public function __construct(string $name) {
-        $this->name = $name;
 
         if (strtoupper($name) == 'GATTO'){
-            $this->name = 'miao';
+            $this->name = 'Gatto <i class="fa-solid fa-cat"></i>';
         } else if(strtoupper($name) == 'CANE') {
-            $this->name = 'bau';
+            $this->name = 'Cane <i class="fa-solid fa-dog"></i>';
         } else{
             die('error');
         }
     }
 
-    public function get_name()
-    {
-        return $this->name;
-    }
-    public function set_name($name)
-    {
-        $this-> name = $name;
-    }
+
 }

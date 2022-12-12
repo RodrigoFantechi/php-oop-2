@@ -21,8 +21,11 @@ class Product{
     {
         $this->price = $price;
     }
+    
     public function get_price()
     {
         return $this->price;
     }
+
+
 }
