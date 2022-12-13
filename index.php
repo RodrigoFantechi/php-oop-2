@@ -11,11 +11,6 @@ $products = [
     new Product('cuccia', new Category('gatto'), new Type('kennel'), 'https://picsum.photos/200/300', 40)
 ];
 
-try {
-   $prova = new Category('can');
-} catch (Exception $e) {
-    echo 'Eccezione: ' . $e->getMessage();
-    }
 ?>
 
 <!doctype html>
