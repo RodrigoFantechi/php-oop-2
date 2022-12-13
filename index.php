@@ -11,7 +11,11 @@ $products = [
     new Product('cuccia', new Category('gatto'), new Type('kennel'), 'https://picsum.photos/200/300', 40)
 ];
 
-
+try {
+   $prova = new Category('can');
+} catch (Exception $e) {
+    echo 'Eccezione: ' . $e->getMessage();
+    }
 ?>
 
 <!doctype html>
@@ -30,10 +34,10 @@ $products = [
 
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark text-light">
     <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
         <?php foreach ($products as $product) : ?>
-            <div class="card bg-light m-3">
+            <div class="card bg-light m-3 text-dark">
                 <img src="<?= $product->image ?>" alt="">
                 <div class="contents p-2">
                     <h4><?= $product->name ?></h4>
